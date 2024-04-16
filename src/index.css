@@ -1,0 +1,6 @@
+@import url(./vendor/normalize.sass);
+@import url(./vendor/fonts/fonts.sass);
+
+* {
+    outline: 1px solid red;
+}
