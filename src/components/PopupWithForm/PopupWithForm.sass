@@ -1,0 +1,109 @@
+.popup 
+  display: flex
+  justify-content: center
+  align-items: center
+  position: fixed
+  inset: 0
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 2
+  visibility: hidden
+  opacity: 0
+  transition: visibility 0s, opacity .2s linear
+
+  &_opened 
+    visibility: visible
+    opacity: 1
+
+  &__container 
+    box-sizing: border-box
+    position: relative
+    width: calc((100vw - 320px) / (1280 - 320) * (430 - 282) + 282px)
+    padding: calc((100vw - 320px) / (1280 - 320) * (34 - 25) + 25px) calc((100vw - 320px) / (1280 - 320) * (36 - 22) + 22px) calc((100vw - 320px) / (1280 - 320) * (37 - 25) + 25px)
+    border-radius: 10px
+    background-color: #fff
+    box-shadow: 0 0 25px 0 rgba(0, 0, 0, .15)
+
+  &__title 
+      margin: 0 0 calc((100vw - 320px) / (1280 - 320) * (46 - 70) + 70px)
+      color: #000
+      font-size: calc((100vw - 320px) / (1280 - 320) * (24 - 18) + 18px)
+      font-weight: 900
+      line-height: calc((100vw - 320px) / (1280 - 320) * (29 - 22) + 22px)
+
+  &__btn-save 
+      width: 100%
+      min-height: calc((100vw - 320px) / (1280 - 320) * (50 - 46) + 46px)
+      margin-top: 50px
+      border: none
+      border-radius: 2px
+      background-color: #000
+      color: #fff
+      font-size: calc((100vw - 320px) / (1280 - 320) * (18 - 14) + 14px)
+      line-height: calc((100vw - 320px) / (1280 - 320) * (22 - 17) + 17px)
+      transition: opacity 0.2s linear
+
+      &:hover 
+        opacity: 0.8
+        cursor: pointer
+
+      &_disabled 
+        background-color: #fff
+        border: 1px solid rgba(0, 0, 0, 0.2)
+        color: rgba(0, 0, 0, 0.2)
+
+        & :hover 
+            opacity: 1
+            cursor: pointer
+
+//.popup__btn-close
+  &__btn-close 
+    position: absolute
+    top: -40px
+    right: -40px
+    width: calc((100vw - 320px) / (1280 - 320) * (32 - 20) + 20px)
+    height: calc((100vw - 320px) / (1280 - 320) * (32 - 20) + 20px)
+    outline: none
+    border: none
+    background: transparent url(../../../images/btn-close.svg) center center / cover no-repeat
+    transition: opacity 0.2s linear
+
+    &:hover 
+      opacity: 0.6
+      cursor: pointer
+
+
+// @media screen and (min-width: 1280px) 
+//   .popup__btn-close 
+//     width: 32px
+//     height: 32px
+//     background-size: 32px
+  
+
+
+// @media screen and (max-width: 767px) 
+//   .popup__btn-close 
+//     right: 0px
+//     top: -36px
+  
+
+
+// @media screen and (min-width: 1280px) 
+//   .popup__btn-save 
+//       min-height: 50px
+//       font-size: 18px
+//       line-height: 22px
+    
+
+// @media screen and (min-width: 1280px) 
+//   .popup__title 
+//       margin: 0 0 46px
+//       font-size: 24px
+//       line-height: 29px
+  
+
+// @media screen and (min-width: 1280px) 
+//   .popup__container 
+//     padding: 34px 36px 37px
+//     width: 430px
+  
+
