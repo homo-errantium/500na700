@@ -2,14 +2,15 @@
 @import '../../vendor/vars/_mixins'
     
 .header 
-    flex-grow: 0
-    flex-shrink: 0
+    // flex-grow: 0
+    // flex-shrink: 0
     display: flex
     justify-content: center
     align-items: center
     width: 100%
     padding: 20px 0 15px
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.3)
+    flex: 0 1 auto
 
     &__logo-link
         display: inline-block
@@ -35,3 +36,4 @@
 
         &:hover
             cursor: pointer
+            background: linear-gradient(#FB8627, #F5BEF6)

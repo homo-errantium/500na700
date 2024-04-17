@@ -1,11 +1,13 @@
 import './Slider.sass';
 import { Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+// import Slide from './Slide/Slide';
 import sliderButtonLeft from '../../images/vectorLeft.svg';
 import sliderButtonRight from '../../images/vectorRight.svg';
 
 function Slider({ data }) {
     const [slideWidth, setslideWidth] = useState(100);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
     const [pages, setPages] = useState([]);
     const [offset, setOffset] = useState(0);
 
@@ -19,15 +21,22 @@ function Slider({ data }) {
                 break;
             default:
                 setslideWidth(window.innerWidth);
+                console.log('HZ');
+
                 break;
         }
     }
 
     useEffect(() => {
+        setWindowWidth(window.innerWidth);
+        handleChangeCardWidth();
+        // Trigger this function on resize
         window.addEventListener('resize', handleChangeCardWidth);
+        console.log('🚀 ~ useEffect ~ window.innerWidth:', window.innerWidth);
+        //  Cleanup for componentWillUnmount
         return () =>
             window.removeEventListener('resize', handleChangeCardWidth);
-    }, [slideWidth]);
+    }, [slideWidth, windowWidth]);
 
     function handleBtnRedirect() {
         <Navigate to='/' replace={true} />;
@@ -48,6 +57,7 @@ function Slider({ data }) {
         });
     }
 
+    // <Slide key={slide.id} {...slide} width={`${slideWidth}vw`} />
     useEffect(() => {
         const slides = data.map((slide) => (
             <div key={slide.id} className='slide'>
@@ -63,7 +73,7 @@ function Slider({ data }) {
             </div>
         ));
         setPages(slides);
-    }, [data, slideWidth]);
+    }, [windowWidth, data, slideWidth]);
 
     return (
         <div className='slider'>

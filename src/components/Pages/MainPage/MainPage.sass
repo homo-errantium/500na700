@@ -9,6 +9,42 @@
 .promo-slider
     width: 100%
     display: flex
-
     align-items: center
     padding: 40px 0 40px 0
+    // border-bottom: 0.5px solid rgba(255, 255, 255, 0.3)
+
+.news
+    padding-top: 150px
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3)
+    &__title
+        margin: 0
+        margin-bottom: 40px
+        text-transform: uppercase
+        font-family: Inter
+        font-size: 40px
+        font-weight: 600
+        line-height: 44px
+        text-align: left
+    &__card-container
+        width: 100%
+        display: grid
+        align-items: center
+        justify-content: center
+        justify-items: center
+        grid-template-columns: repeat(auto-fit, minmax(440px, 1fr))
+        column-gap: 20px
+        row-gap: 40px
+
+.faq
+    padding-top: 150px
+    width: 100%
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &__title
+        margin: 0
+        text-transform: uppercase
