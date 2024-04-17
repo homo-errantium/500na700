@@ -4,11 +4,34 @@
 .header 
     flex-grow: 0
     flex-shrink: 0
-    box-sizing: border-box
-    // background: $bg-color-secondary
     display: flex
-    justify-content: space-between
+    justify-content: center
     align-items: center
     width: 100%
-    padding: 18px 70px
+    padding: 20px 0 15px
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3)
 
+    &__logo-link
+        display: inline-block
+        
+    
+    &__logo-img
+        width: 69.45px
+        height: 82.63px
+
+    &__button
+        padding: 12px 20px
+        overflow: hidden
+        color: $color-white
+        background-color: transparent
+        font-family: Inter
+        font-size: 16px
+        font-weight: 500
+        line-height: 20.8px
+        text-align: left
+        background: linear-gradient(#0F0F17, #0F0F17) padding-box, linear-gradient(#FB8627, #F5BEF6) border-box
+        border-radius: 40px   
+        border: 1px solid transparent
+
+        &:hover
+            cursor: pointer

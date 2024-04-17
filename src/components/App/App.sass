@@ -21,4 +21,15 @@ body
   -moz-text-size-adjust: 100%
 
 .container
+    display: flex
+    align-items: center
+    justify-content: space-between
     @include width-MinMax
+    width: 100%
+    height: 100%
+
+    &_column
+      flex-direction: column
+
+*
+  box-sizing: border-box
