@@ -2,14 +2,79 @@
 @import '../../vendor/vars/_mixins'
     
 .footer 
-    // flex-grow: 0
-    // flex-shrink: 0
-    box-sizing: border-box
-    // background: $bg-color-secondary
     display: flex
-    flex-direction: column-reverse
     align-items: center
+    justify-content: center
     width: 100%
-    padding: 18px 70px
+    padding: 40px 0 40px 0
     flex: 0 1 auto
+    background: linear-gradient(#FB8627, #F5BEF6) 
+    &__logo-container
+        max-width: 103px
+        width: 100%
 
+    &__logo-link
+        display: inline-block
+        display: flex
+        align-items: center
+        justify-content: center
+
+        &:hover
+            cursor: pointer
+
+        &_social 
+            width: 24px
+            height: 24px
+
+        &_main
+            margin-bottom: 20px
+            width: 100%
+
+    &__logo-img-main
+        width: 100%
+        height: 124px
+
+    &__social-logo-container
+        width: 100%
+        display: flex
+        justify-content: space-between
+
+    &__logo-img-youtube
+        width: 100%
+        // height: 16.8px
+
+    &__logo-img-telegram
+        width: 100%
+        // height: 14px
+
+    &__logo-img-vk
+        width: 100%
+        // height: 12.3px
+
+    ul
+        list-style: none
+        padding: 0
+        display: flex
+        flex-direction: column
+        row-gap:15px
+                
+        li
+            width: fit-content
+            a
+                color: #fff
+                text-decoration: none
+                font-family: Inter
+                font-size: 16px
+                font-weight: 500
+                line-height: 20.8px
+                text-align: left
+
+    &__nav-list
+        margin: 0
+        column-gap: 159px
+        height: 93px
+        flex-wrap: wrap 
+
+    &__contact-item:first-child
+        margin-bottom: 5px
+        
