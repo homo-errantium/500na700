@@ -30,10 +30,7 @@ function Slider({ data }) {
     useEffect(() => {
         setWindowWidth(window.innerWidth);
         handleChangeCardWidth();
-        // Trigger this function on resize
         window.addEventListener('resize', handleChangeCardWidth);
-        console.log('🚀 ~ useEffect ~ window.innerWidth:', window.innerWidth);
-        //  Cleanup for componentWillUnmount
         return () =>
             window.removeEventListener('resize', handleChangeCardWidth);
     }, [slideWidth, windowWidth]);
@@ -57,7 +54,6 @@ function Slider({ data }) {
         });
     }
 
-    // <Slide key={slide.id} {...slide} width={`${slideWidth}vw`} />
     useEffect(() => {
         const slides = data.map((slide) => (
             <div key={slide.id} className='slide'>

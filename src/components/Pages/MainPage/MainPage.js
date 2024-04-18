@@ -7,13 +7,13 @@ import sliderData from '../../DataBase/sliderData';
 import newsData from '../../DataBase/newsData';
 import NewsCard from '../../NewsCard/NewsCard';
 import AccordeonFAQ from '../../Accordeon/AccordeonFAQ/AccordeonFAQ';
+import RegistrationForm from '../../Register/RegistrationForm/RegistrationForm';
 
 function MainPage() {
     return (
         <div className='page'>
             <Header />
             <Main>
-                {/* <div className='container container_column'> */}
                 <section className='promo-slider container container_column'>
                     <Slider data={sliderData} />
                 </section>
@@ -32,7 +32,7 @@ function MainPage() {
                     </div>
                 </section>
                 <section className='subscription'>
-                    <div className='container'>
+                    <div className='container container_subscription'>
                         <div className='subscription__text-container'>
                             <h2 className='subscription__title'>
                                 Подпишись на рассылку
@@ -42,32 +42,9 @@ function MainPage() {
                                 трансляций
                             </p>
                         </div>
-                    </div>
-                    <div className='subscription__form-container'>
-                        <form action='' method='get'>
-                            <p>
-                                <label for='email'>Электронная почта</label>
-                                <input
-                                    type='email'
-                                    name='email'
-                                    id='email'
-                                    required
-                                />
-                            </p>
-                            <p>
-                                <label for='phone'>Телефон</label>
-                                <input
-                                    type='text'
-                                    name='phone'
-                                    id='phone'
-                                    required
-                                />
-                            </p>
-                            <button type='submit'>Отправить</button>
-                        </form>
+                        <RegistrationForm />
                     </div>
                 </section>
-                {/* </div> */}
             </Main>
             <Footer />
         </div>
