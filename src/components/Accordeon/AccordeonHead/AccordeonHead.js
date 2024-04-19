@@ -1,6 +1,5 @@
 import './AccordeonHead.sass';
 import vectorUp from '../../../images/vectorUp.svg';
-import { NavLink } from 'react-router-dom';
 
 function AccordeonHead({ isActive, handleConnectPopup }) {
     return (
@@ -20,21 +19,21 @@ function AccordeonHead({ isActive, handleConnectPopup }) {
                         />
                     </button>
                     <div className='navbar__down-content'>
-                        <NavLink class='navbar__down-content-link'>
+                        <a href='/' class='navbar__down-content-link'>
                             О 500na700
-                        </NavLink>
-                        <NavLink class='navbar__down-content-link'>
+                        </a>
+                        <a href='/' class='navbar__down-content-link'>
                             Документы
-                        </NavLink>
-                        <NavLink class='navbar__down-content-link'>
+                        </a>
+                        <a href='/' class='navbar__down-content-link'>
                             Устойчивое развитие
-                        </NavLink>
-                        <NavLink class='navbar__down-content-link'>
+                        </a>
+                        <a href='/' class='navbar__down-content-link'>
                             Команда
-                        </NavLink>
-                        <NavLink class='navbar__down-content-link'>
+                        </a>
+                        <a href='/' class='navbar__down-content-link'>
                             Стратегия
-                        </NavLink>
+                        </a>
                     </div>
                 </div>
                 <div
@@ -51,41 +50,44 @@ function AccordeonHead({ isActive, handleConnectPopup }) {
                         />
                     </button>
                     <div className='navbar__down-content'>
-                        <NavLink className='navbar__down-content-link'>
+                        <a href='/' className='navbar__down-content-link'>
                             Project-1
-                        </NavLink>
-                        <NavLink className='navbar__down-content-link'>
+                        </a>
+                        <a href='/' className='navbar__down-content-link'>
                             Project-1
-                        </NavLink>
-                        <NavLink className='navbar__down-content-link'>
+                        </a>
+                        <a href='/' className='navbar__down-content-link'>
                             Project-1
-                        </NavLink>
+                        </a>
                     </div>
                 </div>
-                <NavLink
+                <a
+                    href='/'
                     to='/news'
                     className={`navbar__item navbar__static ${
                         isActive && 'navbar__item_dark'
                     }`}
                 >
                     Новости
-                </NavLink>
-                <NavLink
+                </a>
+                <a
+                    href='/'
                     to='/'
                     className={`navbar__item navbar__static ${
                         isActive && 'navbar__item_dark'
                     }`}
                 >
                     FAQ
-                </NavLink>
-                <NavLink
+                </a>
+                <a
+                    href='/'
                     to='/'
                     className={`navbar__item navbar__static ${
                         isActive && 'navbar__item_dark'
                     }`}
                 >
                     Контакты
-                </NavLink>
+                </a>
             </nav>
             <button
                 type='button'
