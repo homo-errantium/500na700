@@ -50,6 +50,7 @@
         margin: 0
         text-transform: uppercase
 
+
 .subscription
     width: 100%
     padding: 80px 40px
@@ -75,3 +76,53 @@
 
 .container_subscription
     align-items: flex-start
+
+@media screen and ( max-width:1360px )
+    .faq__title
+        margin-left: 1vw
+
+@media screen and ( max-width: 768px )
+    .news__title
+        //styleName: H2;
+        font-family: Inter
+        font-size: 24px
+        font-weight: 600
+        line-height: 26.4px
+        text-align: left
+        margin-bottom: 30px
+        margin-left: 10px
+
+    .news__card-container
+        display: flex
+
+    .subscription
+        padding: 40px 10px 40px 10px
+        &__title
+            font-family: Inter
+            font-size: 24px
+            font-weight: 600
+            line-height: 26.4px
+            text-align: left
+            margin-bottom: 30px
+        &__subtitle
+            display: none
+        
+    .container_subscription
+        flex-direction: column
+        min-width: none
+        padding: 0 10px 0 10px
+
+    .promo-slider
+        padding-bottom: 60px
+    
+    .news
+        padding-top: 80px
+
+    .faq
+        padding: 80px 10px 0 10px
+        flex-direction: column
+
+    .faq__title
+        margin-left: 0
+
+    

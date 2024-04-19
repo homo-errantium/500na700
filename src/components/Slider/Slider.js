@@ -1,5 +1,5 @@
 import './Slider.sass';
-import { Navigate } from 'react-router-dom';
+import { NavLink, Navigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 // import Slide from './Slide/Slide';
 import sliderButtonLeft from '../../images/vectorLeft.svg';
@@ -21,8 +21,6 @@ function Slider({ data }) {
                 break;
             default:
                 setslideWidth(window.innerWidth);
-                console.log('HZ');
-
                 break;
         }
     }
@@ -36,7 +34,7 @@ function Slider({ data }) {
     }, [slideWidth, windowWidth]);
 
     function handleBtnRedirect() {
-        <Navigate to='/' replace={true} />;
+        <NavLink to='/news' replace={true} />;
     }
 
     function handleRightClick() {
@@ -60,6 +58,7 @@ function Slider({ data }) {
                 <div className='slide__text-container'>
                     <p className='slide__title'>{slide.title}</p>
                     <p className='slide__description'>{slide.description}</p>
+                    {slide.date && <p className='slide__date'>{slide.date}</p>}
                 </div>
                 <img
                     src={slide.image}

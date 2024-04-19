@@ -1,12 +1,11 @@
-.accordeon__container
-  width: 900px
-
 .accordion 
   display: block
   margin: 0px
   position: relative
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.3)
 
+.accordeon__container
+  width: 900px
 
 .accordion input 
   display: none
@@ -65,3 +64,25 @@
   transform: rotate(90deg)
   transition: all .3s 
 
+@media screen and ( max-width: 960px )
+  .accordeon__container
+    width: 90vw
+
+@media screen and ( max-width:  768px)
+  .accordion__header
+    padding: 20px 0 20px 0
+  .accordion__content 
+    padding-bottom: 20px
+    &-text
+      font-family: Inter
+      font-size: 16px
+      font-weight: 400
+      line-height: 20.8px
+      text-align: left
+
+
+  
+
+@media screen and ( max-width: 475px )
+  .accordeon__container
+    width: 100%

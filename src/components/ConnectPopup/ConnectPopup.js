@@ -1,5 +1,7 @@
 import React from 'react';
+import './ConnectPopup.sass';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
+import DataProcessing from '../Register/RegistrationForm/DataProcessing/DataProcessing';
 
 function ConnectPopup({ isOpen, onClose, onSubmit }) {
     const [name, setName] = React.useState('');
@@ -43,7 +45,7 @@ function ConnectPopup({ isOpen, onClose, onSubmit }) {
                     id='place-name'
                     type='text'
                     name='name'
-                    placeholder='Название'
+                    placeholder='Имя'
                     minLength='2'
                     maxLength='30'
                     required
@@ -54,15 +56,16 @@ function ConnectPopup({ isOpen, onClose, onSubmit }) {
                 <input
                     className='popup__input'
                     id='place-link'
-                    type='url'
-                    name='url'
-                    placeholder='Ссылка на картинку'
+                    type='phone'
+                    name='phone'
+                    placeholder='Телефон'
                     required
                     onChange={handleLinkChange}
                     value={link}
                 />
                 <span className='popup__input-error place-link-error'></span>
             </fieldset>
+            <DataProcessing />
         </PopupWithForm>
     );
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import './PopupWithForm.sass';
-
+import popupBtnClose from '../../images/popup-close-button.svg';
 function PopupWithForm(props) {
     return (
         <div
@@ -19,7 +19,7 @@ function PopupWithForm(props) {
                     {props.children}
 
                     <button type='submit' className='popup__btn-save'>
-                        {props.buttonText || 'Отправить'}
+                        {'Отправить'}
                     </button>
                 </form>
 
@@ -27,7 +27,13 @@ function PopupWithForm(props) {
                     className='popup__btn-close'
                     type='button'
                     onClick={props.onClose}
-                ></button>
+                >
+                    <img
+                        src={popupBtnClose}
+                        alt='кнопка закрытия попапа'
+                        className='popup__btn-close-img'
+                    />
+                </button>
             </div>
         </div>
     );

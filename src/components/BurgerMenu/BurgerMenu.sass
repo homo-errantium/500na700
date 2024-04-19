@@ -13,21 +13,21 @@
         top: 0
         left: 0
         background-color: rgba(0, 0, 0, 0.4)
-        z-index: 1
+        z-index: 10
     
-
         &__container 
+            top: 87px
+            position: absolute
             display: flex
             flex-direction: column
-            align-items: center
+            align-items: flex-start
             justify-content: space-between
-            position: relative
             box-sizing: border-box
-            padding: 159px 90px 90px 90px
-            width: 520px
+            padding: top 30px
+            padding-left: 10px
+            width: 100%
             min-height: 100vh
-            background-color: #000
-            opacity: 0.95
+            background-color: #0F0F17
         
 
         &__container-empty 
@@ -36,11 +36,11 @@
 
         &__close-button 
             position: absolute
-            // background: url('../../images/burger-menu-close-button.svg') center no-repeat
+            background: url('../../images/burger-close-button.svg') center no-repeat
             background-color: transparent
             border: none
-            height: 22px
-            width: 22px
+            height: 36px
+            width: 36px
             top: 27px
             right: 27px
         
@@ -114,12 +114,9 @@
         
 
 
-@media (max-width: 576px) 
+@media (max-width: 768px) 
     .burger-menu__container 
-        padding: 144px 10px 46px 10px
-        width: 70%
-    
-
+        padding: 30px 10px 10px 10px
     .burger-menu 
         width: 100%
         left: 0
@@ -128,7 +125,7 @@
 
 @media (max-width: 320px) 
     .burger-menu__container 
-        padding: 144px 10px 116px 10px
+        // padding: 144px 10px 116px 10px
         width: 100%
         min-height: 100vh
     

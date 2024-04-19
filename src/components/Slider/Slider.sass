@@ -3,7 +3,7 @@
   
 .slider
   width:100%
-  height: 540px
+  // height: 540px
   position: relative
   &__button-website
     position: absolute
@@ -21,6 +21,9 @@
     border-radius: 40px
     border: 1px solid $color-white
     background-color: transparent
+    z-index: 5
+    &:hover
+      cursor: pointer
   &__content  
     height: 540px
     width: 1360px
@@ -93,9 +96,58 @@
     font-weight: 400
     line-height: 20.8px
     text-align: left
-    opacity: 0.5px
+    opacity: 0.5
 
-  @media screen and ( max-width: 1440px )
-    .slide__text-container
-      width: 730px
-    
+@media screen and ( max-width: 1440px )
+  .slide__text-container
+    width: 730px
+    // width: 100%
+
+@media screen and ( max-width: 768px )
+  .slide
+    flex-direction: column-reverse
+    position: static
+    &__date
+      margin: 0
+      margin-bottom: 30px
+    &__description
+      width: 300px
+      margin-bottom: 20px
+  .slider
+    &__button-website
+      display: none
+  .slide__image
+    max-width: 100%
+    margin-bottom: 20px
+  .slide__text-container
+    width: 768px
+    padding: 0 10px 0 10px
+
+    // gap: 20px
+  .slider__control-buttons
+    position: static
+    margin-bottom: 20px
+
+  .slide__title
+    width: 768px
+    //styleName: H2;
+    font-family: Inter
+    font-size: 24px
+    font-weight: 600
+    line-height: 26.4px
+    text-align: left
+
+
+@media screen and ( max-width: 425px )
+  .slide__text-container
+    width: 425px
+  .slide__title
+    width: 425px
+@media screen and ( max-width: 375px )
+  .slide__text-container
+    width: 375px
+  .slide__title
+    width: 375px
+
+
+  

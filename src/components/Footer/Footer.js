@@ -8,7 +8,7 @@ import footerVKLogo from '../../images/footerLogo/footer-logo-vk.svg';
 function Footer() {
     return (
         <footer className='footer' id='footer'>
-            <div className='container'>
+            <div className='container footer__container'>
                 <div className='footer__logo-container'>
                     <NavLink
                         to='/'
@@ -85,7 +85,7 @@ function Footer() {
                     </li>
                     <li className='footer__contact-item'>
                         <a
-                            className='contacts__link'
+                            className='footer__contact-phone'
                             href='tel:+70000000000'
                             target='_blank'
                             rel='noreferrer'
@@ -95,7 +95,7 @@ function Footer() {
                     </li>
                     <li className='footer__contact-item'>
                         <a
-                            className='contacts__link'
+                            className='footer__contact-email'
                             href='mailto:email@email.ru?body=Привет, вопрос по поводу:'
                             target='_blank'
                             rel='noreferrer'

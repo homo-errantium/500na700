@@ -1,4 +1,5 @@
 import './MainPage.sass';
+import { useEffect, useState } from 'react';
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
 import Main from '../../Main/Main';
@@ -9,10 +10,34 @@ import NewsCard from '../../NewsCard/NewsCard';
 import AccordeonFAQ from '../../Accordeon/AccordeonFAQ/AccordeonFAQ';
 import RegistrationForm from '../../Register/RegistrationForm/RegistrationForm';
 
-function MainPage() {
+function MainPage({ handleConnectPopup }) {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    function handleWindowWith() {
+        setWindowWidth(window.innerWidth);
+    }
+
+    function chooseNewsFormat() {
+        if (windowWidth > 768) {
+            return newsData.map((item) => {
+                return <NewsCard key={item.id} card={item} />;
+            });
+        } else {
+            return <Slider data={newsData} />;
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            handleWindowWith();
+        });
+    }, []);
+
     return (
         <div className='page'>
-            <Header />
+            <Header
+                handleConnectPopup={handleConnectPopup}
+                windowWidth={windowWidth}
+                handleWindowWith={handleWindowWith}
+            />
             <Main>
                 <section className='promo-slider container container_column'>
                     <Slider data={sliderData} />
@@ -20,9 +45,7 @@ function MainPage() {
                 <section className='news container container_column'>
                     <h2 className='news__title'>Новости</h2>
                     <div className='news__card-container'>
-                        {newsData.map((item) => {
-                            return <NewsCard key={item.id} card={item} />;
-                        })}
+                        {chooseNewsFormat()}
                     </div>
                 </section>
                 <section className='faq container '>
