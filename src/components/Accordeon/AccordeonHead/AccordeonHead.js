@@ -1,5 +1,6 @@
 import './AccordeonHead.sass';
 import vectorUp from '../../../images/vectorUp.svg';
+import { NavLink } from 'react-router-dom';
 
 function AccordeonHead({ isActive, handleConnectPopup }) {
     return (
@@ -61,30 +62,30 @@ function AccordeonHead({ isActive, handleConnectPopup }) {
                         </a>
                     </div>
                 </div>
-                <a
+                <NavLink
+                    to='/news'
                     className={`navbar__item navbar__static ${
                         isActive && 'navbar__item_dark'
                     }`}
-                    href='/'
                 >
                     Новости
-                </a>
-                <a
+                </NavLink>
+                <NavLink
+                    to='/'
                     className={`navbar__item navbar__static ${
                         isActive && 'navbar__item_dark'
                     }`}
-                    href='/'
                 >
                     FAQ
-                </a>
-                <a
+                </NavLink>
+                <NavLink
+                    to='/'
                     className={`navbar__item navbar__static ${
                         isActive && 'navbar__item_dark'
                     }`}
-                    href='/'
                 >
                     Контакты
-                </a>
+                </NavLink>
             </nav>
             <button
                 type='button'

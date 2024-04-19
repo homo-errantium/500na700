@@ -8,7 +8,10 @@ function BurgerMenu(props) {
         <div className='burger-menu'>
             <div className='burger-menu__container-empty'></div>
             <div className='burger-menu__container'>
-                <AccordeonHead isActive={props.isActive} />
+                <AccordeonHead
+                    isActive={props.isActive}
+                    handleConnectPopup={props.handleConnectPopup}
+                />
             </div>
         </div>
     );

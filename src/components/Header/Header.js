@@ -85,7 +85,14 @@ function Header({ windowWidth, handleWindowWith, handleConnectPopup }) {
                         className='navigation__burger-button-img'
                     />
                 </button>
-                {isClicked ? <BurgerMenu isActive={isOverlay} /> : ''}
+                {isClicked ? (
+                    <BurgerMenu
+                        isActive={isOverlay}
+                        handleConnectPopup={handleConnectPopup}
+                    />
+                ) : (
+                    ''
+                )}
             </div>
         </header>
     );

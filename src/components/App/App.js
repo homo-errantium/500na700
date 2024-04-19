@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.sass';
 import MainPage from '../Pages/MainPage/MainPage';
 import ConnectPopup from '../ConnectPopup/ConnectPopup';
+import NewsPage from '../Pages/NewsPage/NewsPage';
 
 function App() {
     const [isConnectPopupOpen, setIsConnectPopupOpen] = useState(false);
@@ -43,7 +44,7 @@ function App() {
                         />
                     }
                 />
-                {/* <Route path='/news' element={<NewsPage />} /> */}
+                <Route path='/news' element={<NewsPage />} />
                 {/* <Route path='/about-500na700' element={<AboutUsPage />} />
             <Route path='/documents' element={<DocumentsPage />} />
             <Route path='/sust-development' element={<DevelopmentPage />} />
