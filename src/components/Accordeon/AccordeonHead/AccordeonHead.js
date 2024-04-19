@@ -20,21 +20,21 @@ function AccordeonHead({ isActive, handleConnectPopup }) {
                         />
                     </button>
                     <div className='navbar__down-content'>
-                        <a class='navbar__down-content-link' href='#'>
+                        <NavLink class='navbar__down-content-link'>
                             О 500na700
-                        </a>
-                        <a class='navbar__down-content-link' href='#'>
+                        </NavLink>
+                        <NavLink class='navbar__down-content-link'>
                             Документы
-                        </a>
-                        <a class='navbar__down-content-link' href='#'>
+                        </NavLink>
+                        <NavLink class='navbar__down-content-link'>
                             Устойчивое развитие
-                        </a>
-                        <a class='navbar__down-content-link' href='#'>
+                        </NavLink>
+                        <NavLink class='navbar__down-content-link'>
                             Команда
-                        </a>
-                        <a class='navbar__down-content-link' href='#'>
+                        </NavLink>
+                        <NavLink class='navbar__down-content-link'>
                             Стратегия
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
                 <div
@@ -51,15 +51,15 @@ function AccordeonHead({ isActive, handleConnectPopup }) {
                         />
                     </button>
                     <div className='navbar__down-content'>
-                        <a className='navbar__down-content-link' href='#'>
+                        <NavLink className='navbar__down-content-link'>
                             Project-1
-                        </a>
-                        <a className='navbar__down-content-link' href='#'>
+                        </NavLink>
+                        <NavLink className='navbar__down-content-link'>
                             Project-1
-                        </a>
-                        <a className='navbar__down-content-link' href='#'>
+                        </NavLink>
+                        <NavLink className='navbar__down-content-link'>
                             Project-1
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
                 <NavLink

@@ -1,5 +1,5 @@
 import './Slider.sass';
-import { NavLink, Navigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 // import Slide from './Slide/Slide';
 import sliderButtonLeft from '../../images/vectorLeft.svg';

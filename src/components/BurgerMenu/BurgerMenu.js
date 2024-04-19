@@ -1,7 +1,6 @@
 import React from 'react';
 import './BurgerMenu.sass';
 import AccordeonHead from '../Accordeon/AccordeonHead/AccordeonHead';
-import Header from '../Header/Header';
 
 function BurgerMenu(props) {
     return (
