@@ -1,3 +1,61 @@
+# Тестовое задание для "500na700"
+
+### Используемые технологии:
+
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+## Для установки вам необходимо:
+
+1. скачать репозиторий. Скопировать папку с файлами можно через SSH-ключ:
+
+```
+git clone git@github.com:homo-errantium/500na700.git
+
+```
+
+или загрузите [ZIP-версию](git@github.com:homo-errantium/500na700.git)
+
+2. заходим в корневую папку
+
+```
+интерфейс компакт-диска
+```
+
+3. установить зависимости
+
+```
+установка npm
+```
+
+## Для начала вам нужно:
+
+1. соберите приложение для производства в папке `build`:
+
+```
+npm запустить сборку
+```
+
+2. запустите приложение в режиме разработки:
+
+```
+запуск НПМ
+```
+
+```
+npm-тест
+```
+
+Команда запускает программу запуска тестов в режиме просмотра в реальном времени. Дополнительную информацию см. в разделе [выполнение тестов](https://facebook.github.io/create-react-app/docs/running-tests).
+
+## Имеется план действий по улучшению сайта:
+
+-   оптимизировать стили
+-   оптимизировать логику отрисовки карточек
+-   установать режим прокрутки слайдера infinity loop
+-   оптимизировать загрузку изображений
+
+### Спасибо за просмотр
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
