@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './ConnectPopup.sass';
 import PopupWithForm from '../PopupWithForm/PopupWithForm';
 import DataProcessing from '../Register/RegistrationForm/DataProcessing/DataProcessing';
@@ -7,17 +7,17 @@ import {
   NAME_REGEX,
   DATA_PROCESSING_TEXT,
 } from '../../constants/constants';
-import RegistrationField from '../Register/RegistrationForm/RegistrationField/RegistrationField';
 
-function ConnectPopup({ isOpen, onClose, onSubmit }) {
-  const [responseMessage, setResponseMessage] = useState('');
+function ConnectPopup({ isOpen, onClose }) {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
+  // eslint-disable-next-line no-unused-vars
   const [isValid, setIsValid] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Мы свяжемся с Вами в ближайшее время');
+    onClose();
   };
   const handleChange = (evt) => {
     const { name, value } = evt.target;
