@@ -8,13 +8,13 @@ import NewsPage from '../Pages/NewsPage/NewsPage';
 function App() {
     const [isConnectPopupOpen, setIsConnectPopupOpen] = useState(false);
 
-    function handleConnectPopupSubmit() {
+    const handleConnectPopupSubmit = () => {
         setIsConnectPopupOpen(true);
-    }
+    };
 
-    function closePopup() {
+    const closePopup = () => {
         setIsConnectPopupOpen(false);
-    }
+    };
 
     useEffect(() => {
         const close = (e) => {

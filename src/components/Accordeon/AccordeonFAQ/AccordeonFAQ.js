@@ -4,9 +4,9 @@ import vectorUp from '../../../images/vectorUp.svg';
 function AccordeonFAQ() {
     return (
         <div className='accordeon__container'>
-            <label class='accordion'>
-                <input type='radio' name='radio-accordion' />
-                <div class='accordion__header'>
+            <label className='accordion' htmlFor='services'>
+                <input type='radio' name='radio-accordion' id='services' />
+                <div className='accordion__header'>
                     <p className='accordion__header-text'>
                         Какие услуги предоставляет ваша студия?
                     </p>
@@ -16,8 +16,8 @@ function AccordeonFAQ() {
                         className='accordion__header-img'
                     />
                 </div>
-                <div class='accordion__content'>
-                    <p class='accordion__content-text'>
+                <div className='accordion__content'>
+                    <p className='accordion__content-text'>
                         Мы придерживаемся высоких стандартов качества и
                         стремимся создавать уникальный дизайн, отвечающий
                         потребностям и ожиданиям наших клиентов. Наши дизайнеры
@@ -26,9 +26,9 @@ function AccordeonFAQ() {
                     </p>
                 </div>
             </label>
-            <label class='accordion'>
-                <input type='radio' name='radio-accordion' />
-                <div class='accordion__header'>
+            <label className='accordion' htmlFor='uniq'>
+                <input type='radio' name='radio-accordion' id='uniq' />
+                <div className='accordion__header'>
                     <p className='accordion__header-text'>
                         Как вы обеспечиваете качество и уникальность дизайна?
                     </p>
@@ -38,8 +38,8 @@ function AccordeonFAQ() {
                         className='accordion__header-img'
                     />
                 </div>
-                <div class='accordion__content'>
-                    <p class='accordion__content-text'>
+                <div className='accordion__content'>
+                    <p className='accordion__content-text'>
                         Мы придерживаемся высоких стандартов качества и
                         стремимся создавать уникальный дизайн, отвечающий
                         потребностям и ожиданиям наших клиентов. Наши дизайнеры
@@ -48,9 +48,9 @@ function AccordeonFAQ() {
                     </p>
                 </div>
             </label>
-            <label class='accordion'>
-                <input type='radio' name='radio-accordion' />
-                <div class='accordion__header'>
+            <label className='accordion' htmlFor='content'>
+                <input type='radio' name='radio-accordion' id='content' />
+                <div className='accordion__header'>
                     <p className='accordion__header-text'>
                         Предоставляете ли вы услуги по созданию контента для
                         сайтов и приложений?
@@ -61,8 +61,8 @@ function AccordeonFAQ() {
                         className='accordion__header-img'
                     />
                 </div>
-                <div class='accordion__content'>
-                    <p class='accordion__content-text'>
+                <div className='accordion__content'>
+                    <p className='accordion__content-text'>
                         Мы придерживаемся высоких стандартов качества и
                         стремимся создавать уникальный дизайн, отвечающий
                         потребностям и ожиданиям наших клиентов. Наши дизайнеры

@@ -1,16 +1,12 @@
 import './AccordeonHead.sass';
 import vectorUp from '../../../images/vectorUp.svg';
 
-function AccordeonHead({ isActive, handleConnectPopup }) {
+function AccordeonHead({ handleConnectPopup }) {
     return (
         <div className='navbar__container'>
             <nav className='navbar'>
-                <div
-                    className={`navbar__item navbar__down ${
-                        isActive && 'navbar__item_dark'
-                    }`}
-                >
-                    <button class='navbar__down-btn'>
+                <div className='navbar__item navbar__down'>
+                    <button className='navbar__down-btn'>
                         О нас
                         <img
                             src={vectorUp}
@@ -19,28 +15,24 @@ function AccordeonHead({ isActive, handleConnectPopup }) {
                         />
                     </button>
                     <div className='navbar__down-content'>
-                        <a href='/' class='navbar__down-content-link'>
+                        <a href='/' className='navbar__down-content-link'>
                             О 500na700
                         </a>
-                        <a href='/' class='navbar__down-content-link'>
+                        <a href='/' className='navbar__down-content-link'>
                             Документы
                         </a>
-                        <a href='/' class='navbar__down-content-link'>
+                        <a href='/' className='navbar__down-content-link'>
                             Устойчивое развитие
                         </a>
-                        <a href='/' class='navbar__down-content-link'>
+                        <a href='/' className='navbar__down-content-link'>
                             Команда
                         </a>
-                        <a href='/' class='navbar__down-content-link'>
+                        <a href='/' className='navbar__down-content-link'>
                             Стратегия
                         </a>
                     </div>
                 </div>
-                <div
-                    className={`navbar__item navbar__down ${
-                        isActive && 'navbar__item_dark'
-                    }`}
-                >
+                <div className='navbar__item navbar__down'>
                     <button className='navbar__down-btn'>
                         Проекты
                         <img
@@ -61,31 +53,13 @@ function AccordeonHead({ isActive, handleConnectPopup }) {
                         </a>
                     </div>
                 </div>
-                <a
-                    href='/'
-                    to='/news'
-                    className={`navbar__item navbar__static ${
-                        isActive && 'navbar__item_dark'
-                    }`}
-                >
+                <a href='/' to='/news' className='navbar__item navbar__static'>
                     Новости
                 </a>
-                <a
-                    href='/'
-                    to='/'
-                    className={`navbar__item navbar__static ${
-                        isActive && 'navbar__item_dark'
-                    }`}
-                >
+                <a href='/' to='/' className='navbar__item navbar__static'>
                     FAQ
                 </a>
-                <a
-                    href='/'
-                    to='/'
-                    className={`navbar__item navbar__static ${
-                        isActive && 'navbar__item_dark'
-                    }`}
-                >
+                <a href='/' to='/' className='navbar__item navbar__static'>
                     Контакты
                 </a>
             </nav>

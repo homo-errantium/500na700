@@ -1,105 +1,88 @@
-.navbar 
+@import '../../../vendor/vars/_vars'
+.navbar
   display: flex
   overflow: hidden
-  font-family: Arial, Helvetica, sans-serif
+  font-family: $font-Inter
+  /*затемнение остальныx пунктов
+  &:hover
+    .navbar__item:not(.navbar__item:hover)
+      opacity: 0.5
 
-  &__item
-    float: left
-    &_dark
-      opacity: 0.5    
+  &__container
+    display: flex
+    justify-content: space-between
+    width: 100%
+
   /*статичная ссылка*/
-  &__static 
-    font-size: 16px
+  &__static
+    @include h4Param()
     color: white
-    text-align: center
     padding: 14px 16px
     text-decoration: none
-    line-height: 20.8px
+    text-align: center
 
   /*раскрывающийся блок*/
-  &__down 
+  &__down
     overflow: hidden
-          /*при наведении на заголовок, контент открывается
-    &:hover 
-      opacity: 1
-      .navbar__down-btn-img
-        transform: rotate(90deg)
-        transition: all .3s 
+    &:hover .navbar__down-btn-img
+      @include rotateAnimation()
 
-      .navbar__down-content 
-        display: flex
-        flex-direction: column
-        flex-wrap: wrap
-        padding-top: 51px 
-        padding-left: 14px 
-        height: 140px
-        row-gap: 13px
-        column-gap: 60px
+    &:hover .navbar__down-content
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      padding-top: 51px
+      padding-left: 14px
+      height: 140px
+      row-gap: 13px
+      column-gap: 60px
 
-    /*заголовок блока*/
-    &-btn 
+    /*заголовок динамичного блока*/
+    &-btn
+      @include h4Param()
       border: none
       outline: none
       color: white
       padding: 14px 16px
-      background-color: inherit
+      background-color: transparent
       margin: 0
-      font-family: Inter
-      font-size: 16px
       font-weight: 500
-      line-height: 20.8px
-      text-align: left
       &-img
         width: 9px
         height: 9px
         margin-left: 8.23px
+
     /*содержимое блока*/
-    &-content 
+    &-content
       display: none
       position: absolute
       min-width: 160px
-      &-link 
-        
+      &-link
+        @include h4Param()
         float: none
         text-decoration: none
-        display: inline
-        text-align: left
         color: #fff
-        background-color: inherit
+        background-color: transparent
         margin: 0
-        font-family: Inter
-        font-size: 16px
         font-weight: 500
-        line-height: 20.8px
-        text-align: left
-
-
 
 @media screen and ( max-width: 768px )
-  .navbar__down:hover .navbar__down-content 
-    height: inherit
-    padding-top: 16px
-    padding-left: 10px
-  
-  .navbar__container
-    flex-direction: column
-
-  .navbar__down-btn 
-    padding: 6px
-
-  .navbar__static
-    padding: 6px
-
-  .navbar__down-content
-    position: relative
-@media screen and ( max-width: 660px )
-  .navbar 
+  .navbar
     flex-direction: column
     align-items: flex-start
     gap: 10px
     margin-bottom: 191px
-  
-.navbar__container
-  display: flex
-  justify-content: space-between
-  width: 100%
+
+    &__container
+      flex-direction: column
+
+    &__down-content
+      position: relative
+
+  .navbar__down:hover .navbar__down-content
+    height: inherit
+    padding-top: 16px
+    padding-left: 10px
+
+  .navbar__static, .navbar__down-btn
+    padding: 6px

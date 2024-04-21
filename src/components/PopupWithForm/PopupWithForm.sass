@@ -1,4 +1,4 @@
-.popup 
+.popup
   display: flex
   justify-content: center
   align-items: center
@@ -10,12 +10,12 @@
   opacity: 0
   transition: visibility 0s, opacity .2s linear
 
-  &_opened 
+  &_opened
     visibility: visible
     opacity: 1
     z-index: 999
 
-  &__container 
+  &__container
     box-sizing: border-box
     position: relative
     // width: 520px
@@ -25,63 +25,65 @@
     background-color: #FFFFFF
     box-shadow: 0 0 25px 0 rgba(0, 0, 0, .15)
 
-  &__title 
+  &__title
+    text-transform: uppercase
     margin: 0
     font-family: Inter
-    font-size: 24px
+    font-size: 20px
     font-weight: 600
-    line-height: 26.4px
+    line-height: 22px
     text-align: left
     margin-bottom: 40px
     color: #000
 
+  &__btn-save
+    padding: 12px 20px
+    overflow: hidden
+    color: black
+    background-color: transparent
+    font-family: 'Inter'
+    font-size: 16px
+    font-weight: 500
+    line-height: 20.8px
+    text-align: left
+    background: linear-gradient(white, white) padding-box,linear-gradient(#fb8627, #f5bef6) border-box
+    border-radius: 40px
+    border: 1px solid transparent
+    transition: opacity 0.2s linear
 
-  &__btn-save 
-      padding: 12px 20px
-      overflow: hidden
-      color: black
-      background-color: transparent
-      font-family: 'Inter'
-      font-size: 16px
-      font-weight: 500
-      line-height: 20.8px
-      text-align: left
-      background: linear-gradient(white, white) padding-box,linear-gradient(#fb8627, #f5bef6) border-box
-      border-radius: 40px
-      border: 1px solid transparent
-      transition: opacity 0.2s linear
+    &:hover
+      opacity: 0.8
+      cursor: pointer
 
-      &:hover 
-        opacity: 0.8
-        cursor: pointer
-
-      &_disabled 
+      &_disabled
         background-color: #fff
         border: 1px solid rgba(0, 0, 0, 0.2)
         color: rgba(0, 0, 0, 0.2)
 
-        & :hover 
-            opacity: 1
-            cursor: pointer
+        & :hover
+          opacity: 1
+          cursor: pointer
 
 //.popup__btn-close
 .popup__btn-close
   position: absolute
-  padding: 6px
+  padding: 5px
   top: 35px
   right: 40px
-  width: 36px
-  height: 36px
+  width: 30px
+  height: 30px
   outline: none
   border: none
   background-color: transparent
   transition: opacity 0.2s linear
+  &-img
+    width: 20px
+    height: 20px
 
-  &:hover 
+  &:hover
     opacity: 0.6
     cursor: pointer
 
 @media screen and ( max-width: 768px )
   .popup__container
     height: 100vh
-  
