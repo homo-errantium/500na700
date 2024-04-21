@@ -2,6 +2,7 @@
 $color-white: #FFFFFF
 $color-black: #0F0F17
 $color-gradient: linear-gradient(#FB8627, #F5BEF6)
+$color-gradient-black: linear-gradient($color-black, $color-black)
 $color-overlay: rgba(0, 0, 0, 0.5)
 
 // FONTS
@@ -35,6 +36,13 @@ $section-border-bottom: 0.5px solid rgba(255, 255, 255, 0.3)
 @mixin width-MinMax()
   max-width: $max-width
   min-width: $min-width
+
+@mixin h1Param()
+  font-family: $font-Inter
+  font-size: $h1
+  font-weight: 600
+  line-height: 44px
+  text-align: left
 
 @mixin h2Param()
   font-family: $font-Inter

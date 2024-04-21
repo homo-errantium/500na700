@@ -1,121 +1,113 @@
 @import '../../vendor/vars/_vars'
 @import '../../vendor/vars/_mixins'
-    
-.footer 
+
+.footer
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 100%
+  padding: 40px 0 40px 0
+  flex: 0 1 auto
+  background: $color-gradient
+
+  //logo блок
+  &__logo
+    &-container
+      max-width: 103px
+      width: 100%
+
+    &-link
+      display: flex
+      align-items: center
+      justify-content: center
+
+      &:hover
+        cursor: pointer
+
+      &_social
+        width: 24px
+        height: 24px
+        & > img
+          width: 100%
+
+      &_main
+        margin-bottom: 20px
+        width: 100%
+
+    &-img-main
+      width: 100%
+      height: 122px
+
+  &__social-logo-container
     display: flex
-    align-items: center
-    justify-content: center
+    justify-content: space-between
     width: 100%
-    padding: 40px 0 40px 0
-    flex: 0 1 auto
-    background: linear-gradient(#FB8627, #F5BEF6) 
-    &__logo-container
-        max-width: 103px
-        width: 100%
 
-    &__logo-link
-        display: inline-block
-        display: flex
-        align-items: center
-        justify-content: center
+  ul
+    flex-direction: column
+    list-style: none
+    padding: 0
+    display: flex
+    row-gap: 15px
 
-        &:hover
-            cursor: pointer
+    li
+      width: fit-content
 
-        &_social 
-            width: 24px
-            height: 24px
+      a
+        @include h4Param()
+        color: #fff
+        text-decoration: none
 
-        &_main
-            margin-bottom: 20px
-            width: 100%
+  &__nav-list
+    margin: 0
+    column-gap: 159px
+    height: 93px
+    flex-wrap: wrap
 
-    &__logo-img-main
-        width: 100%
-        height: 124px
+  &__contact-item:first-child
+    margin-bottom: 5px
 
-    &__social-logo-container
-        width: 100%
+@media screen and ( max-width:1360px )
+  .footer
+    padding-left: 1vw
+    padding-right: 1vw
+@media screen and ( max-width: 768px )
+  .footer
+    //logo блок
+    &__logo
+      &-img-main
+        height: 100%
+
+      &-container
         display: flex
         justify-content: space-between
+        max-width: none
 
-    &__logo-img-youtube
-        width: 100%
-        // height: 16.8px
+      &-link
+        height: 82.63px
 
-    &__logo-img-telegram
-        width: 100%
-        // height: 14px
+        &_social
+          height: 24px
 
-    &__logo-img-vk
-        width: 100%
-        // height: 12.3px
+        &_main
+          width: 69.45px
+        // <---logo блок--->
 
-    ul
-        list-style: none
-        padding: 0
-        display: flex
-        flex-direction: column
-        row-gap:15px
-                
-        li
-            width: fit-content
-            a
-                color: #fff
-                text-decoration: none
-                font-family: Inter
-                font-size: 16px
-                font-weight: 500
-                line-height: 20.8px
-                text-align: left
+    &__social-logo-container
+      max-width: 104px
 
+    &__container
+      padding: 0 10px 0 10px
+      flex-direction: column
+      align-items: flex-start
+    &__nav
+      margin-bottom: 40px
     &__nav-list
-        margin: 0
-        column-gap: 159px
-        height: 93px
-        flex-wrap: wrap 
-
-    &__contact-item:first-child
-        margin-bottom: 5px
-        
-@media screen and ( max-width: 768px )
-    .footer
-        &__social-logo-container
-            max-width: 104px
-        &__logo-img-youtube
-            width: auto
-        &__logo-img-telegram
-            width: auto
-        &__logo-img-vk
-            width: auto
-        &__logo-link
-            height: 82.63px
-            &_main
-                width: 69.45px
-
-        &__logo-link_social
-            height: 24px
-        &__logo-img-main
-            // width: 100%
-            height:100%
-        &__logo-container
-            display: flex
-            justify-content: space-between
-            max-width: none
-            // flex-direction: row
-
-    .footer__container
-        padding: 0 10px 0 10px
-        flex-direction: column
-        align-items: flex-start
-    .footer__nav
-        margin-bottom: 40px
-    .footer__nav-list
-        column-gap: 50%
-    .footer__contact-list
-        margin: 0
-        row-gap: 0
-    .footer__contact-location
-        margin-bottom: 20px
-    .footer__contact-phone
-        margin-bottom: 10px
+      column-gap: 50%
+    &__contact-list
+      margin: 0
+      row-gap: 0
+    &__contact-location
+      margin-bottom: 20px
+    &__contact-phone
+      margin-bottom: 10px

@@ -64,6 +64,7 @@ function Header({ windowWidth, handleConnectPopup }) {
           />
         </NavLink>
         <Navigation
+          className="header__navigation"
           handleConnectPopup={handleConnectPopup}
           isActive={isOverlay}
         />

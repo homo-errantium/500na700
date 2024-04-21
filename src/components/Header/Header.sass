@@ -1,5 +1,4 @@
 @import '../../vendor/vars/_vars'
-@import '../../vendor/vars/_mixins'
 
 .header
   position: relative
@@ -8,7 +7,7 @@
   align-items: center
   width: 100%
   padding: 20px 0 15px
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.3)
+  border-bottom: $section-border-bottom
   flex: 0 1 auto
 
     /*header-overlay*/
@@ -21,7 +20,7 @@
       height: 100vh
       top: 0
       left: 0
-      background-color: rgba(0, 0, 0, 0.5)
+      background-color: $color-overlay
       z-index: 100
       &-black-head-active
         display: block
@@ -30,7 +29,7 @@
         height: 281px
         top: 0
         left: 0
-        background-color: #000
+        background-color: $color-black
         z-index: 200
 
     &__logo-link
@@ -41,50 +40,31 @@
       height: 82.63px
 
   &__button
+    @include h4Param()
     max-width: 181px
     padding: 12px 19px
     overflow: hidden
     color: $color-white
-    font-family: Inter
-    font-size: 16px
     font-weight: 500
-    line-height: 20.8px
-    text-align: left
-    background: linear-gradient(#0F0F17, #0F0F17) padding-box, linear-gradient(#FB8627, #F5BEF6) border-box
+    background: $color-gradient-black padding-box, $color-gradient border-box
     border-radius: 40px
     border: 1px solid transparent
 
     &:hover
       cursor: pointer
-      background: linear-gradient(#FB8627, #F5BEF6)
+      background: $color-gradient
 
 @media screen and ( max-width: 768px  )
   .header
     padding: 20px 10px 10px 10px
+
     &__logo-img
       width: 43.65px
       height: 52.13px
 
-.navigation__burger-button
-  display: none
-  padding: 0
-  background-color: transparent
-  border: none
-  height: 36px
-  width: 36px
-  padding: 6px
-  &-img
-    width: 100%
-    background-color: transparent
-    border: none
-  &:hover
-    cursor: pointer
+    &__container
+      padding-left: 10px
+      padding-right: 10px
 
-@media screen and ( max-width: 768px  )
-  .header__container
-    padding-left: 10px
-    padding-right: 10px
-    .navigation__burger-button
-      display: block
-
-    .promo
+      .navigation__burger-button
+        display: block

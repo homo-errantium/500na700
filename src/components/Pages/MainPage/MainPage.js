@@ -25,6 +25,7 @@ function MainPage({ handleConnectPopup }) {
       return <Slider data={newsData} />;
     }
   };
+
   useEffect(() => {
     window.addEventListener('resize', () => {
       handleWindowWith();

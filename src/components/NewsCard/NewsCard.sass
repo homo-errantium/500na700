@@ -1,4 +1,3 @@
-@import '../../vendor/vars/_mixins'
 @import '../../vendor/vars/_vars'
 
 .card
@@ -11,28 +10,15 @@
     margin-bottom: 20px
 
   &__title
+    @include h2Param()
     margin: 0
     color: $color-white
     text-transform: uppercase
-    font-family: Inter
-    font-size: 24px
-    font-weight: 600
-    line-height: 26.4px
-    text-align: left
     margin-bottom: 10px
   &__description
-    font-family: Inter
-    font-size: 16px
-    font-weight: 400
-    line-height: 20.8px
-    text-align: left
+    @include h4Param()
     opacity: 0.5
     color: $color-white
   &__date
     color: $color-white
-    font-family: Inter
-    font-size: 16px
-    font-weight: 400
-    line-height: 20.8px
-    text-align: left
-
+    @include h4Param()
