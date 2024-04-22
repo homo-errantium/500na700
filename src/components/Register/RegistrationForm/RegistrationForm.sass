@@ -1,0 +1,52 @@
+@import '../../../vendor/vars/_vars'
+
+.registration-form
+  width: 100%
+  max-width: 900px
+
+  &__form
+    margin: 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+  &__fields
+    width: 100%
+    display: grid
+    align-items: start
+    justify-content: center
+    justify-items: center
+    grid-template-columns: repeat(auto-fit, minmax(200px, 440px))
+    gap: 20px
+    margin-bottom: 15px
+
+  &__button
+    padding: 12px 20px
+    overflow: hidden
+    color: $color-black
+    background-color: transparent
+    @include h4Param() //font-size 16
+    font-weight: 500
+    background: $color-gradient-white padding-box, $color-gradient border-box
+    border-radius: 40px
+    border: 1px solid transparent
+
+    &:hover
+      cursor: pointer
+      background: $color-gradient
+
+    &_popup
+      background-color: $color-black
+
+    &_disabled
+      display: none
+
+    &_inactive
+      opacity: 0.9
+      cursor: not-allowed
+
+  &__button-icon
+    width: 20px
+    height: 20px

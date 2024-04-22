@@ -1,21 +1,16 @@
 @import '../../vendor/vars/_vars'
-@import '../../vendor/vars/_mixins'
 
 .slider
   width: 100%
   // height: 540px
   position: relative
   &__button-website
+    @include h5Param() //font-size 12
     position: absolute
     top: 0
     left: 0
     opacity: 0.5
     text-transform: uppercase
-    font-family: Inter
-    font-size: 12px
-    font-weight: 500
-    line-height: 15.6px
-    text-align: left
     color: $color-white
     padding: 6px 15px
     border-radius: 40px
@@ -77,71 +72,61 @@
     max-width: 44vw
 
   &__title
+    @include h1Param() //font-size 40
     max-width: 670px
     display: table
     margin: 0
-    font-family: Inter
-    font-size: 40px
-    font-weight: 600
-    line-height: 44px
-    text-align: left
     margin-bottom: 20px
 
   &__description
+    @include h4Param() //font-size 16
     max-width: 440px
     display: table
     margin: 0
-    font-family: Inter
-    font-size: 16px
-    font-weight: 400
-    line-height: 20.8px
-    text-align: left
     opacity: 0.5
 
 @media screen and ( max-width: 1440px )
   .slide__text-container
     width: 730px
-    // width: 100%
 
 @media screen and ( max-width: 768px )
   .slide
     flex-direction: column-reverse
     position: static
+
     &__date
       margin: 0
       margin-bottom: 30px
+
     &__description
       width: 300px
       margin-bottom: 20px
+
+    &__image
+      max-width: 100%
+      margin-bottom: 20px
+    &__text-container
+      width: 768px
+      padding: 0 10px 0 10px
+
+    &__title
+      @include h2Param() //font-size 24
+      width: 768px
+
   .slider
     &__button-website
       display: none
-  .slide__image
-    max-width: 100%
-    margin-bottom: 20px
-  .slide__text-container
-    width: 768px
-    padding: 0 10px 0 10px
 
-    // gap: 20px
-  .slider__control-buttons
-    position: static
-    margin-bottom: 20px
-
-  .slide__title
-    width: 768px
-    //styleName: H2;
-    font-family: Inter
-    font-size: 24px
-    font-weight: 600
-    line-height: 26.4px
-    text-align: left
+    &__control-buttons
+      position: static
+      margin-bottom: 20px
 
 @media screen and ( max-width: 425px )
   .slide__text-container
     width: 425px
   .slide__title
     width: 425px
+
 @media screen and ( max-width: 375px )
   .slide__text-container
     width: 375px

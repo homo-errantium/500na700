@@ -1,5 +1,5 @@
 import React from 'react';
-import './DataProcessing.scss';
+import './DataProcessing.sass';
 
 const DataProcessing = ({ handleChange, id }) => (
   <label className="data-processing__checkbox-label" htmlFor={id}>

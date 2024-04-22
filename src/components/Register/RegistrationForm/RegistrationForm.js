@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import './RegistrationForm.scss';
+import './RegistrationForm.sass';
 import RegistrationField from './RegistrationField/RegistrationField';
 import {
   EMAIL_REGEX,
   DATA_PROCESSING_TEXT,
 } from '../../../constants/constants';
 import DataProcessing from './DataProcessing/DataProcessing';
-import { PHONE_REGEX, DATE_REGEX } from '../../../constants/constants';
+import {
+  PHONE_REGEX,
+  DATE_REGEX,
+  TIME_REGEX,
+} from '../../../constants/constants';
 
 const RegistrationForm = () => {
   function onSubmit() {
@@ -46,6 +50,7 @@ const RegistrationForm = () => {
         ...errors,
         phone: 'Введите телефон в формате +7 999 999 99 99',
       });
+      console.log(errors);
     }
   };
 
@@ -56,7 +61,20 @@ const RegistrationForm = () => {
       setIsValid(false);
       setErrors({
         ...errors,
-        email: 'Введите email в формате address@domain.com',
+        date: 'Введите дату в формате дд.мм.гггг',
+      });
+      console.log(errors);
+    } else console.log(errors);
+  };
+
+  const handleTimeChange = (evt) => {
+    handleChange(evt);
+    const { name, value } = evt.target;
+    if (name === 'email' && !TIME_REGEX.test(value)) {
+      setIsValid(false);
+      setErrors({
+        ...errors,
+        time: 'Введите время в формате 00:00',
       });
     }
   };
@@ -116,17 +134,16 @@ const RegistrationForm = () => {
           label="Телефон"
           name="phone-number"
           placeholder="Телефон"
-          type="text"
+          type="tel"
           handleChange={handlePhoneChange}
           values={values}
           errors={errors}
-          eye
         />
         <RegistrationField
-          name="date"
-          placeholder="Дата (например, 01.01.1990)"
+          name="time"
+          placeholder="Время (например, 10:00)"
           type="text"
-          handleChange={handleDateChange}
+          handleChange={handleTimeChange}
           values={values}
           errors={errors}
         />

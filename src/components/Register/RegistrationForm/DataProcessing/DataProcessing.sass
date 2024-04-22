@@ -1,0 +1,49 @@
+
+.data-processing
+  &__checkbox-label
+    display: block
+    width: 100%
+    margin: 0
+    margin-bottom: 30px
+    cursor: pointer
+    user-select: none
+    position: relative
+
+  &__checkbox-label &__checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+    display: block
+    width: 0
+    height: 0
+
+  &__checkbox-label &__checkbox-text
+    max-width: 400px
+    width: 100%
+    display: inline-block
+    position: relative
+    padding: 0 0 0 31px
+
+  &__checkbox-label &__checkbox-text:before
+    content: ""
+    display: inline-block
+    width: 22px
+    height: 22px
+    position: absolute
+    left: 0
+    top: 0
+    transition: background 0.3s ease
+    background: url(../../../../images/сheckbox.svg) 0 0 no-repeat
+
+  &__checkbox-label &__checkbox:checked + &__checkbox-text:before
+    background: url(../../../../images/checkbox-active.svg) 0 0 no-repeat
+
+  &__checkbox-text
+    text-transform: uppercase
+    color: rgba(0, 0, 0, 0.5)
+    font-family: "Inter", sans-serif
+    font-size: 12px
+    font-weight: 500
+    line-height: 15.6px
+    text-align: left
+    margin: 0
