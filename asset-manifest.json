@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/500na700/static/css/main.47c5758b.css",
-    "main.js": "/500na700/static/js/main.d4cc5d0c.js",
+    "main.css": "/500na700/static/css/main.2511ca25.css",
+    "main.js": "/500na700/static/js/main.a8384db7.js",
     "static/js/453.6f18e4e1.chunk.js": "/500na700/static/js/453.6f18e4e1.chunk.js",
     "static/media/slide-img.png": "/500na700/static/media/slide-img.cfdabaf0ff4dc0673610.png",
     "static/media/Inter-SemiBold.woff": "/500na700/static/media/Inter-SemiBold.843a643bf991c6acd400.woff",
@@ -27,15 +27,15 @@
     "static/media/сheckbox.svg": "/500na700/static/media/сheckbox.79ceda2451fa5eefe3c1.svg",
     "static/media/popup-close-button.svg": "/500na700/static/media/popup-close-button.e7d4c89f6e294f5bd00cfe76c763eaab.svg",
     "static/media/burger-close-button.svg": "/500na700/static/media/burger-close-button.2ff59ed5b7b1c0384754b8f38d5bbaad.svg",
-    "static/media/vectorLeft.svg": "/500na700/static/media/vectorLeft.c6e30234b94a50c40e1bb602a2f1e1f2.svg",
-    "static/media/vectorRight.svg": "/500na700/static/media/vectorRight.dedc3ac62f55e662f528401a9199fb65.svg",
+    "static/media/vectorLeft.svg": "/500na700/static/media/vectorLeft.c6e30234b94a50c40e1b.svg",
+    "static/media/vectorRight.svg": "/500na700/static/media/vectorRight.dedc3ac62f55e662f528.svg",
     "static/media/burger-button.svg": "/500na700/static/media/burger-button.5060df02e6e4eaf562d849804e88b235.svg",
-    "main.47c5758b.css.map": "/500na700/static/css/main.47c5758b.css.map",
-    "main.d4cc5d0c.js.map": "/500na700/static/js/main.d4cc5d0c.js.map",
+    "main.2511ca25.css.map": "/500na700/static/css/main.2511ca25.css.map",
+    "main.a8384db7.js.map": "/500na700/static/js/main.a8384db7.js.map",
     "453.6f18e4e1.chunk.js.map": "/500na700/static/js/453.6f18e4e1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.47c5758b.css",
-    "static/js/main.d4cc5d0c.js"
+    "static/css/main.2511ca25.css",
+    "static/js/main.a8384db7.js"
   ]
 }
