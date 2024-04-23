@@ -5,9 +5,9 @@
   margin: 0px
   position: relative
   border-bottom: $section-border-bottom
-
   &__container
-    width: 900px
+    max-width: 900px
+    width: 63vw
 
   &__header
     display: flex
@@ -22,15 +22,18 @@
     z-index: 2
     &-text
       @include h2Param()
+      text-transform: uppercase
       margin: 0
       color: $color-white
-      max-width: 700px
+      max-width: 830px
+      line-height: 26px
 
     &-img
       margin-right: 10px
       margin-left: 20px
-      width: 17px
-      height: 17px
+      width: 17.41px
+      height: 17.41px
+      margin: 10px
 
     &:hover
       cursor: pointer
@@ -42,6 +45,7 @@
     padding-bottom: 30px
     &-text
       margin: 0
+      margin-bottom: 30px
 
 .accordion input
   display: none

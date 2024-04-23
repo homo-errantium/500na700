@@ -6,7 +6,7 @@
   justify-content: center
   align-items: center
   width: 100%
-  padding: 20px 0 15px
+  padding: 18px 0 12px
   border-bottom: $section-border-bottom
   flex: 0 1 auto
 
@@ -54,6 +54,12 @@
       cursor: pointer
       background: $color-gradient
 
+@media screen and ( max-width: 1024px  )
+  .header
+    &__container
+      padding-left: 10px
+      padding-right: 10px
+
 @media screen and ( max-width: 768px  )
   .header
     padding: 20px 10px 10px 10px
@@ -62,9 +68,6 @@
       width: 43.65px
       height: 52.13px
 
-    &__container
-      padding-left: 10px
-      padding-right: 10px
-
-      .navigation__burger-button
-        display: block
+    // &__container
+    //   padding-left: 10px
+    //   padding-right: 10px
